@@ -2,10 +2,12 @@
 
 <h3>Pick a deck and start a game</h3>
   
-  <% @decks.each do |deck| %>
-    <a href="/game/<%= deck.name %>/###CARD_ID###"></a>
-  <% end %>
 
+  <ul>
+    <% @decks.each do |deck| %>
+      <li><a href="/game/<%= deck.id %>"><%= deck.name %></a></li>
+    <% end %>
+  </ul>
 
 <h3>Rounds Played</h3>
 

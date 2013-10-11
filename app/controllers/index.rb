@@ -13,6 +13,10 @@ get '/profile' do
 	erb :profile 
 end
 
+get '/game/:game_id' do
+	redirect "/game/#{params[:game_id]}"
+end
+
 #========== POST =========
 
 post '/signup' do
@@ -41,3 +45,5 @@ post '/game/:game_id/:card_id' do
 	# if game is finished, display game results view
 	# :game_results 
 end
+
+
