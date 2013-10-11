@@ -13,8 +13,17 @@ get '/profile' do
 	erb :profile 
 end
 
-get '/game/:game_id' do
-	redirect "/game/#{params[:game_id]}"
+get '/round/deck/:deck_id' do
+	deck = Deck.find(params[:deck_id])
+	p deck
+	cards = deck.cards
+	@card = cards.sample
+	redirect "/round/deck/#{deck.id}/card/#{@card.id}"
+end
+
+get '/round/deck/:deck_id/card/:card_id' do
+	card = Card.find(params[:card_id])
+	render :card_show
 end
 
 #========== POST =========
@@ -39,10 +48,10 @@ post '/login' do
 	end 
 end 
 
-post '/game/:game_id/:card_id' do
-	# if game is not finished, continue iterating through cards and display game board view
-	redirect '/game'
-	# if game is finished, display game results view
+post '/round/:round_id/:card_id' do
+	# if round is not finished, continue iterating through cards and display round board view
+	redirect '/round/deck/:deck_id'
+	# if round is finished, display round results view
 	# :game_results 
 end
 

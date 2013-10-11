@@ -3,7 +3,35 @@
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  background-color: #87F03C;
+
 }
 th {
   text-align: left;
+}
+
+.navbar a { 
+  float: left;
+  background-color: black;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height:80px;
+  margin-bottom: 40px;
+}
+
+.navbar a:hover {
+  color: #87F03C;
+}
+
+body {
+  background-color: tomato;
+}
+
+ul a:hover {
+  color: teal;
+  text-decoration: none;
 }
