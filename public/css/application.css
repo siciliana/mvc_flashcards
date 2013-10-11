@@ -4,6 +4,7 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
   background-color: #87F03C;
+  font-family: 'Krona One', sans-serif;
 
 }
 th {
@@ -21,6 +22,8 @@ th {
   text-align: center;
   height:80px;
   margin-bottom: 40px;
+  font-size: 40px;
+  font-family: 'Krona One', sans-serif;
 }
 
 .navbar a:hover {
@@ -31,7 +34,15 @@ body {
   background-color: tomato;
 }
 
+ul li a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
 ul a:hover {
-  color: teal;
+  color: white;
   text-decoration: none;
 }
