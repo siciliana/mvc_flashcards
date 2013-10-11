@@ -1,4 +1,16 @@
 <h1>Profile Page for <%= @user.name %></h1>
 
+<h3>Pick a deck and start a game</h3>
+  
+  <% decks.each do |deck| %>
+    <a href="/game/<%= deck.name %>/###CARD_ID###"></a>
+  <% end %>
+
+
 <h3>Rounds Played</h3>
 
+  <% @user.rounds.each do |round| %>
+    <%= round.result %>
+  <% end %>
+
+  
