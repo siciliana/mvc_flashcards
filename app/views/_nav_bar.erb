@@ -1,0 +1,12 @@
+<div class="navbar">
+ <ul>
+  <li><a href='/'>Flashcards Home</a></li> 
+  <li>
+    <% if #current_user %>
+      <a href='/logout'>Logout</a>
+    <% else %>
+      <a href='/login'>Login</a>
+    <% end %>
+  </li> 
+  </ul>
+</div>
