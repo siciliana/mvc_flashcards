@@ -50,9 +50,21 @@ end
 
 post '/round/:round_id/:card_id' do
 	# if round is not finished, continue iterating through cards and display round board view
+	# ----put scoring/iterating logic below ~Alex
 	redirect '/round/deck/:deck_id'
 	# if round is finished, display round results view
 	# :game_results 
 end
 
-
+post '/checkanswer/:round_id/:id' do
+  @round = Round.find_by_id(params[:round_id])
+  @card = Card.find_by_id(params[:id])
+  @real_answer = Card.find_by_id(params[:id]).answer.downcase
+  @round.counter += 1
+ if params[:answer].downcase == @real_answer
+     @round.score += 1
+     @round.save
+   else
+     @round.save
+   end
+end
