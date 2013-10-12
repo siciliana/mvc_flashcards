@@ -4,7 +4,7 @@ class CreateRounds < ActiveRecord::Migration
   		t.integer :user_id 
   		t.integer :deck_id
   		t.integer :score, default: 0
-  		t.integer :count, default: 0
+  		t.integer :counter, default: 0
   		t.string :result
   		t.timestamps
   	end

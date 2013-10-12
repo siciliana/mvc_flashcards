@@ -43,7 +43,7 @@ SeedDb.create_deck("Onion Or Not", cards_onion)
 
 cards_techcrunch = [
                     {q: "n.: (used as a substitute for) speech regarded as meaningless or stupid, or to comment on a foolish or stupid action.", a: "derp"},
-                    {q: "n.: fear of missing out: anxiety that an exciting or interesting event may currently be happening elsewhere, often aroused by posts seen on a social media website.", q: "FOMO"},
+                    {q: "n.: fear of missing out: anxiety that an exciting or interesting event may currently be happening elsewhere, often aroused by posts seen on a social media website.", a: "FOMO"},
                     {q: "n.: a proposed development of the Internet in which everyday objects have network connectivity, allowing them to send and receive data.", a: "internet of things"},
                     {q: "n.: a period of time during which a person refrains from using electronic devices such as smartphones or computers, regarded as an opportunity to reduce stress or focus on social interaction in the physical world.", a: "digital detox"},
                     {q: "n.: a digital currency in which transactions can be performed without the need for a central bank.", a: "bitcoin"},

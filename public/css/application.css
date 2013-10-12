@@ -11,7 +11,7 @@ th {
   text-align: left;
 }
 
-.navbar a { 
+.navbar_head  { 
   float: left;
   background-color: black;
   width: 100%;
@@ -23,6 +23,21 @@ th {
   height:80px;
   margin-bottom: 40px;
   font-size: 40px;
+  font-family: 'Krona One', sans-serif;
+}
+
+.logout {
+  /*float: left;*/
+  background-color: black;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height:80px;
+  margin-bottom: 40px;
+  font-size: 10px;
   font-family: 'Krona One', sans-serif;
 }
 
