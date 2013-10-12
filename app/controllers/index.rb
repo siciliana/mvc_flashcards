@@ -50,6 +50,7 @@ end
 
 post '/round/:round_id/:card_id' do
 	# if round is not finished, continue iterating through cards and display round board view
+	# ----put scoring/iterating logic below ~Alex
 	redirect '/round/deck/:deck_id'
 	# if round is finished, display round results view
 	# :game_results 
