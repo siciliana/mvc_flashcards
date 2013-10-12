@@ -1,1 +1,5 @@
 <h1> <%= @user.name %>, here's how you did </h1>
+
+ <p>You answered <%= @round.score %> correct out of <%= @deck.cards.length %> questions.</p>
+ 	<br> 
+ 	<p>Percentage right <%= ((@round.score / @deck.cards.length.to_f * 100).round(0))%>%</p> 
