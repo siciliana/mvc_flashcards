@@ -1,0 +1,15 @@
+/*  Animations
+-------------------------------*/
+
+.flash {
+  -webkit-animation: spin 1.5s ease-in-out infinite;
+}
+
+
+
+/*  Keyframes
+------------------------------- */
+
+@-webkit-keyframes spin {
+  50% {-webkit-transform: rotate(360deg) translateY(0px) translateX(0px); }
+}
