@@ -9,8 +9,9 @@ class SeedDb
     end 
 end 
 
-def self.create_deck(deck_title, cards)
-  deck = Deck.new( name: deck_title)
+def self.create_deck(deck_title, url, cards)
+  deck = Deck.new( name: deck_title,
+                   image_url: url)
 
   deck.save
 
@@ -29,7 +30,7 @@ cards_urban = [ {q: "When an individual has no affinity for any sex, only love f
          {q: "Fear of sobering up.", a: "FOSU"},
          {q: "Unrestricted power to fart at one's own discretion.", a: "Farte Blanche"} ]
 
-SeedDb.create_deck("Urban Dictionary", cards_urban)
+SeedDb.create_deck("Urban Dictionary", "/images/urban.jpg", cards_urban)
 
 cards_onion = [{q: "Justin Bieber's Pet Monkey Quarantined in Germany", a: "Not"},
             {q: "Atlanta-Area Church To Burn Ceremonially Throughout Olympics", a: "Onion"},
@@ -39,7 +40,7 @@ cards_onion = [{q: "Justin Bieber's Pet Monkey Quarantined in Germany", a: "Not"
             {q: "Feed-the-Bear Experiment Draws Public-Safety Worry", a: "Not"},
             {q: "Please, no more fried eggs, Death Valley officials say", a: "Not"}]
 
-SeedDb.create_deck("Onion Or Not", cards_onion)
+SeedDb.create_deck("Onion Or Not", "/images/onion.jpg", cards_onion)
 
 cards_techcrunch = [
                     {q: "n.: (used as a substitute for) speech regarded as meaningless or stupid, or to comment on a foolish or stupid action.", a: "derp"},
@@ -51,7 +52,7 @@ cards_techcrunch = [
                     {q: "v.: withdraw one's liking or approval of (a web page or posting on a social media website that one has previously liked).", a: "unlike"}
                   ]
 
-SeedDb.create_deck("TechCrunch Dictionary", cards_techcrunch)
+SeedDb.create_deck("TechCrunch Dictionary", "/images/TC.jpg", cards_techcrunch)
 
 
 # def self.create_game(user_id, deck_id)

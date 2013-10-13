@@ -52,7 +52,7 @@ post '/round/:round_id/deck/:deck_id/card/:card_id' do
   @next_card = @card
   @answer = params[:answer]
 
-   if params[:answer].downcase == @real_answer
+   if params[:user_input].downcase == @real_answer
        @round.score += 1
    end
    @next_route = get_next_card_route(@card, @round, @deck)

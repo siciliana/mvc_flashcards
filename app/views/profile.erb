@@ -1,18 +1,20 @@
-<h1>Profile Page for <%= @user.name %></h1>
+<h1>Welcome to Flashy Flash,<br> <%= current_user.name %></h1>
 
 <h3>Pick a deck and start a game</h3>
   
-
+<div class="decks">
   <ul>
     <% @decks.each do |deck| %>
-      <li><a href="/deck/<%= deck.id %>"><%= deck.name %></a></li>
+      <li><a href="/deck/<%= deck.id %>"><img src="<%= deck.image_url %>"><br></a></li>
+      <li><br><li>
     <% end %>
   </ul>
+ </div>
 
-<h3>Rounds Played</h3>
-
+<h3>Stats</h3>
+  <%= current_user.rounds.count %> Games Played
   <% @user.rounds.each do |round| %>
-    <%= round.result %>
+    <%= round.count %>
   <% end %>
 
   
