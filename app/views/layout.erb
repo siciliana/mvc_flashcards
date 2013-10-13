@@ -20,18 +20,21 @@
   <title></title>
 </head>
 <body>
-  <div class="navbar">
+ 
+<div class="head">
+    <% if current_user %>
+      <a class="logout" href='/logout'>Logout</a>
+    <% end %>
+</div>
 
   <h2><a class="navbar_head" href='/profile'>Flashy Flash<br> <img class="flash" src="/images/flash.svg"></a></h2>
     
 
-    <% if current_user %>
-      <a class="logout" href='/logout'>Logout</a>
-    <% end %>
+
 
 
     <p> <br></p>
-</div>
+
 
   <div class="container">
     <%= yield %>
