@@ -6,6 +6,7 @@ class CreateRounds < ActiveRecord::Migration
   		t.integer :score, default: 0
   		t.integer :counter, default: 0
   		t.string :result
+      t.boolean :complete, default: false 
   		t.timestamps
   	end
   end

@@ -1,3 +1,5 @@
+enable 'sessions'
+
 get '/' do
   erb :index
 end
@@ -28,13 +30,15 @@ post '/login' do
 	# establish session through user_id
 	@user = User.find_by_email(params[:user][:email])
 	if @user
-		session[:user_id] = @user.id 
+
+		# @card = Card.find(params[:card_id])
+  # @deck = Deck.find(params[:deck_id])
+  	# @round = Round.find(params[:id])
+  	session[:user_id] = @user.id 
+		# session[:deck_id] = @deck.id 
 		redirect '/profile'
 	else 
 		session[:error] = "invalid login"
 		redirect '/'
 	end 
 end 
-
-
-
