@@ -11,8 +11,29 @@ th {
   text-align: left;
 }
 
-.navbar a { 
+.navbar_head { 
   float: left;
+  background-color: black;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height:120px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-family: 'Krona One', sans-serif;
+}
+
+.flash {
+  padding-top: 12px;
+  height: 100px;
+  border-radius: 60%;
+}
+
+.logout {
+  /*float: left;*/
   background-color: black;
   width: 100%;
   margin-top: 0;
@@ -22,12 +43,13 @@ th {
   text-align: center;
   height:80px;
   margin-bottom: 40px;
-  font-size: 40px;
+  font-size: 10px;
   font-family: 'Krona One', sans-serif;
 }
 
 .navbar a:hover {
   color: #87F03C;
+    -webkit-animation-name: shake;
 }
 
 body {
